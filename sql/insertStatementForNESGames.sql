@@ -1,51 +1,74 @@
 
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (1,'Super Mario Bros.','Nintendo',1985,9.5,'Common','Easy');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (2,'The Legend of Zelda','Nintendo',1986,9.7,'Common','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (3,'Metroid','Nintendo',1986,9.2,'Common','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (4,'Donkey Kong','Nintendo',1986,8.9,'Common','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (5,'Castlevania','Konami',1987,9.0,'Common','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (6,'Mega Man','Capcom',1987,9.1,'Common','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (7,'Final Fantasy','Square',1987,9.3,'Common','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (8,'Ninja Gaiden','Tecmo',1988,9.4,'Common','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (9,'Super Mario Bros. 2','Nintendo',1988,9.0,'Common','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (10,'Zelda II: The Adventure of Link','Nintendo',1988,8.8,'Common','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (11,'DuckTales','Capcom',1989,9.2,'Common','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (12,'Mega Man 2','Capcom',1988,9.5,'Common','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (13,'Castlevania II: Simon''s Quest','Konami',1987,8.7,'Common','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (14,'Final Fantasy II','Square',1990,9.3,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (15,'Ninja Gaiden II: The Dark Sword of Chaos','Tecmo',1990,9.4,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (16,'Super Mario Bros. 3','Nintendo',1988,9.6,'Common','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (17,'The Legend of Zelda: Link''s Awakening','Nintendo',1993,9.5,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (18,'Metroid II: Return of Samus','Nintendo',1991,9.2,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (19,'Mega Man 3','Capcom',1990,9.1,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (20,'DuckTales 2','Capcom',1993,9.0,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (21,'Castlevania III: Dracula''s Curse','Konami',1990,9.3,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (22,'Final Fantasy III','Square',1990,9.5,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (23,'Ninja Gaiden III: The Ancient Ship of Doom','Tecmo',1990,9.2,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (24,'Super Mario All-Stars','Nintendo',1993,9.7,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (25,'The Legend of Zelda: Ocarina of Time','Nintendo',1998,9.8,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (26,'Metroid Fusion','Nintendo',2002,9.4,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (27,'Mega Man X','Capcom',1993,9.3,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (28,'DuckTales Remastered','Capcom',2013,9.0,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (29,'Castlevania: Symphony of the Night','Konami',1997,9.5,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (30,'Final Fantasy VII','Square',1997,9.7,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (31,'Ninja Gaiden Black','Tecmo',2005,9.2,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (32,'Super Mario Galaxy','Nintendo',2007,9.8,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (33,'The Legend of Zelda: Twilight Princess','Nintendo',2006,9.5,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (34,'Metroid Prime','Nintendo',2002,9.7,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (35,'Mega Man 9','Capcom',2008,9.3,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (36,'DuckTales 2 (Remastered)','Capcom',2013,9.0,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (37,'Castlevania: Lords of Shadow','Konami',2010,9.2,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (38,'Final Fantasy XIII','Square Enix',2009,9.0,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (39,'Ninja Gaiden II (2009)','Tecmo',2009,9.2,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (40,'Super Mario 3D Land','Nintendo',2011,9.5,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (41,'The Legend of Zelda: Skyward Sword','Nintendo',2011,9.2,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (42,'Metroid Prime Trilogy','Nintendo',2009,9.7,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (43,'Mega Man 10','Capcom',2010,9.1,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (44,'DuckTales Remastered (PS3)','Capcom',2013,9.0,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (45,'Castlevania: Mirror of Fate','Konami',2013,9.2,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (46,'Final Fantasy XIV','Square Enix',2010,9.0,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (47,'Ninja Gaiden Sigma 2','Tecmo',2009,9.2,'Rare','Hard');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (48,'Super Mario Odyssey','Nintendo',2017,9.8,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (49,'The Legend of Zelda: Breath of the Wild','Nintendo',2017,9.7,'Rare','Medium');
-INSERT INTO game_info(id,name,publisher,year,rating,rarity,difficulty) VALUES (50,'Metroid Dread','Nintendo',2021,9.4,'Rare','Hard');
+
+INSERT INTO GAMES (title, publisher, release_year, price, category_id, stock_quantity) VALUES
+('Super Mario Bros.', 'Nintendo', 1985, 29.99, 1, 100),
+('The Legend of Zelda', 'Nintendo', 1986, 34.99, 2, 75),
+('Donkey Kong', 'Nintendo', 1981, 19.99, 1, 50),
+('Metroid', 'Nintendo', 1986, 24.99, 2, 60),
+('Duck Hunt', 'Nintendo', 1984, 22.99, 1, 45),
+('Mega Man', 'Capcom', 1987, 29.99, 1, 55),
+('Castlevania', 'Konami', 1986, 27.99, 2, 70),
+('Ninja Gaiden', 'Tecmo', 1989, 32.99, 1, 65),
+('Dr. Mario', 'Nintendo', 1990, 21.99, 3, 80),
+('Tetris', 'Nintendo', 1989, 24.99, 3, 90),
+('Bubble Bobble', 'Taito', 1988, 29.99, 4, 50),
+('Contra', 'Konami', 1988, 27.99, 1, 65),
+('Double Dragon', 'Technos', 1988, 32.99, 2, 55),
+('Final Fantasy', 'Square', 1990, 34.99, 5, 60),
+('Metroid II: Return of Samus', 'Nintendo', 1991, 29.99, 2, 45),
+('Kirby’s Adventure', 'Nintendo', 1993, 31.99, 1, 50),
+('Punch-Out!!', 'Nintendo', 1987, 22.99, 1, 40),
+('Kid Icarus', 'Nintendo', 1986, 25.99, 2, 55),
+('Star Tropics', 'Nintendo', 1990, 27.99, 3, 65),
+('Ghosts n Goblins', 'Capcom', 1986, 24.99, 1, 60),
+('Gradius', 'Konami', 1986, 28.99, 4, 70),
+('Blades of Steel', 'Konami', 1988, 21.99, 1, 75),
+('River City Ransom', 'Technos', 1989, 32.99, 2, 55),
+('Teenage Mutant Ninja Turtles', 'Konami', 1989, 29.99, 3, 60),
+('Little Nemo: The Dream Master', 'Capcom', 1990, 27.99, 4, 65),
+('Shadowgate', 'WizCorp', 1987, 22.99, 5, 50),
+('Maniac Mansion', 'Lucasfilm', 1987, 34.99, 2, 45),
+('Uninvited', 'Icom', 1991, 25.99, 4, 60),
+('The Goonies II', 'Konami', 1987, 19.99, 3, 55),
+('Bionic Commando', 'Capcom', 1988, 29.99, 2, 70),
+('Wizards & Warriors', 'Acclaim', 1987, 24.99, 1, 65),
+('Tecmo Bowl', 'Tecmo', 1989, 22.99, 5, 75),
+('Super Contra', 'Konami', 1990, 31.99, 2, 50),
+('Darkwing Duck', 'Capcom', 1992, 28.99, 3, 80),
+('DuckTales', 'Capcom', 1989, 27.99, 1, 60),
+('Ninja Gaiden II: The Dark Sword of Chaos', 'Tecmo', 1990, 32.99, 4, 65),
+('Zelda II: The Adventure of Link', 'Nintendo', 1987, 34.99, 2, 55),
+('Super Mario 3', 'Nintendo', 1988, 29.99, 1, 75),
+('The Adventures of Lolo', 'HAL Laboratories', 1989, 21.99, 3, 70),
+('The Adventures of Lolo 2', 'HAL Laboratories', 1990, 24.99, 3, 55),
+('The Adventures of Lolo 3', 'HAL Laboratories', 1991, 26.99, 3, 60),
+('Dragon Warrior', 'Enix', 1989, 34.99, 2, 45),
+('Dragon Warrior II', 'Enix', 1990, 32.99, 2, 50),
+('Dragon Warrior III', 'Enix', 1992, 29.99, 2, 55),
+('Dragon Warrior IV', 'Enix', 1990, 27.99, 2, 60),
+('Final Fantasy II', 'Square', 1991, 34.99, 5, 65),
+('Final Fantasy III', 'Square', 1994, 37.99, 5, 70),
+('Final Fantasy IV', 'Square', 1991, 34.99, 5, 75),
+('Final Fantasy V', 'Square', 1992, 34.99, 5, 80),
+('Final Fantasy VI', 'Square', 1994, 37.99, 5, 85),
+('Final Fantasy VII', 'Square', 1997, 39.99, 5, 90),
+('Final Fantasy VIII', 'Square', 1999, 39.99, 5, 95),
+('Blades of Steel', 'Konami', 1988, 21.99, 1, 100),
+('River City Ransom', 'Technos', 1989, 32.99, 2, 100),
+('Teenage Mutant Ninja Turtles', 'Konami', 1989, 29.99, 3, 100),
+('Little Nemo: The Dream Master', 'Capcom', 1990, 27.99, 4, 100),
+('Shadowgate', 'WizCorp', 1987, 22.99, 5, 100),
+('Maniac Mansion', 'Lucasfilm', 1987, 34.99, 2, 100),
+('Uninvited', 'Icom', 1991, 25.99, 4, 100),
+('The Goonies II', 'Konami', 1987, 19.99, 3, 100),
+('Bionic Commando', 'Capcom', 1988, 29.99, 2, 100),
+('Wizards & Warriors', 'Acclaim', 1987, 24.99, 1, 100),
+('Tecmo Bowl', 'Tecmo', 1989, 22.99, 5, 100),
+('Super Contra', 'Konami', 1990, 31.99, 2, 100),
+('Darkwing Duck', 'Capcom', 1992, 28.99, 3, 100),
+('DuckTales', 'Capcom', 1989, 27.99, 1, 100),
+('Ninja Gaiden II: The Dark Sword of Chaos', 'Tecmo', 1990, 32.99, 4, 100),
+('Zelda II: The Adventure of Link', 'Nintendo', 1987, 34.99, 2, 100),
+('Super Mario 3', 'Nintendo', 1988, 29.99, 1, 100),
+('The Adventures of Lolo', 'HAL Laboratories', 1989, 21.99, 3, 100),
+('The Adventures of Lolo 2', 'HAL Laboratories', 1990, 24.99, 3, 100);
