@@ -1,5 +1,3 @@
-
-
 INSERT INTO GAMES (title, publisher, release_year, price, category_id, stock_quantity) VALUES
 ('Super Mario Bros.', 'Nintendo', 1985, 29.99, 1, 100),
 ('The Legend of Zelda', 'Nintendo', 1986, 34.99, 2, 75),
@@ -47,28 +45,4 @@ INSERT INTO GAMES (title, publisher, release_year, price, category_id, stock_qua
 ('Dragon Warrior III', 'Enix', 1992, 29.99, 2, 55),
 ('Dragon Warrior IV', 'Enix', 1990, 27.99, 2, 60),
 ('Final Fantasy II', 'Square', 1991, 34.99, 5, 65),
-('Final Fantasy III', 'Square', 1994, 37.99, 5, 70),
-('Final Fantasy IV', 'Square', 1991, 34.99, 5, 75),
-('Final Fantasy V', 'Square', 1992, 34.99, 5, 80),
-('Final Fantasy VI', 'Square', 1994, 37.99, 5, 85),
-('Final Fantasy VII', 'Square', 1997, 39.99, 5, 90),
-('Final Fantasy VIII', 'Square', 1999, 39.99, 5, 95),
-('Blades of Steel', 'Konami', 1988, 21.99, 1, 100),
-('River City Ransom', 'Technos', 1989, 32.99, 2, 100),
-('Teenage Mutant Ninja Turtles', 'Konami', 1989, 29.99, 3, 100),
-('Little Nemo: The Dream Master', 'Capcom', 1990, 27.99, 4, 100),
-('Shadowgate', 'WizCorp', 1987, 22.99, 5, 100),
-('Maniac Mansion', 'Lucasfilm', 1987, 34.99, 2, 100),
-('Uninvited', 'Icom', 1991, 25.99, 4, 100),
-('The Goonies II', 'Konami', 1987, 19.99, 3, 100),
-('Bionic Commando', 'Capcom', 1988, 29.99, 2, 100),
-('Wizards & Warriors', 'Acclaim', 1987, 24.99, 1, 100),
-('Tecmo Bowl', 'Tecmo', 1989, 22.99, 5, 100),
-('Super Contra', 'Konami', 1990, 31.99, 2, 100),
-('Darkwing Duck', 'Capcom', 1992, 28.99, 3, 100),
-('DuckTales', 'Capcom', 1989, 27.99, 1, 100),
-('Ninja Gaiden II: The Dark Sword of Chaos', 'Tecmo', 1990, 32.99, 4, 100),
-('Zelda II: The Adventure of Link', 'Nintendo', 1987, 34.99, 2, 100),
-('Super Mario 3', 'Nintendo', 1988, 29.99, 1, 100),
-('The Adventures of Lolo', 'HAL Laboratories', 1989, 21.99, 3, 100),
-('The Adventures of Lolo 2', 'HAL Laboratories', 1990, 24.99, 3, 100);
+('Final Fantasy III', 'Square', 1994, 37.99, 5, 70)
