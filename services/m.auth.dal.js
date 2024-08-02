@@ -11,17 +11,32 @@ async function getLogins() {
     console.log(error);
   }
 };
+
 async function getLoginByUsername(name) {
   try {
     await dal.connect();
-    // const result = await dal.db("Author").collection("logins").findOne({"username": name});
-    const result = await dal.db("Auth").collection("logins").findOne({"username": name});
-    if(DEBUG) console.log('m.auth.dal.getLoginByUsername() _id: ' + result._id);
+    const db = dal.db("Auth");
+    const collection = db.collection("logins");
+    const result = await collection.findOne({ "username": name });
+    if (DEBUG) console.log('m.auth.dal.getLoginByUsername() _id: ' + result._id);
     return result;
-  } catch(error) {
+  } catch (error) {
     console.log(error);
+  } finally {
+    await dal.close();
   }
 };
+// async function getLoginByUsername(name) {
+//   try {
+//     await dal.connect();
+//     // const result = await dal.db("Author").collection("logins").findOne({"username": name});
+//     const result = await dal.db("Auth").collection("logins").findOne({"username": name});
+//     if(DEBUG) console.log('m.auth.dal.getLoginByUsername() _id: ' + result._id);
+//     return result;
+//   } catch(error) {
+//     console.log(error);
+//   }
+// };
 async function getLoginByEmail(email) {
   try {
     await dal.connect();
@@ -62,9 +77,9 @@ async function addLogin(name, email, password, uuidv4) {
 };
 
 module.exports = {
-    getLogins,
-    getLoginByUsername,
-    addLogin,
-    getLoginByEmail, 
-    getLoginById,
-  }
+  getLogins,
+  getLoginByUsername,
+  getLoginByEmail,
+  getLoginById,
+  addLogin
+};

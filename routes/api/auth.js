@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
 var router = require('express').Router();
-const dal = require('../../services/p.auth.dal')
+// const dal = require('../../services/p.auth.dal')
 const dal = require('../../services/m.auth.dal')
 
 // api/auth/:id
