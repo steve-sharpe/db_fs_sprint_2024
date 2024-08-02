@@ -5,6 +5,8 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 const myEventEmitter = require('../services/logEvents.js');
 
+const jwtSecret = process.env.JWT_SECRET;
+
 // const { addLogin, getLoginByUsername } = require('../services/p.auth.dal')
 const { addLogin, getLoginByUsername } = require('../services/m.auth.dal')
 
