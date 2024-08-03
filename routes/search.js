@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
     res.render('search', {status: req.session.status, theResults});
 });
 
-app.post('/search', async (req, res) => {
+router.post('/search', async (req, res) => {
     let theResults = await pDal.getFullText(req.body.keyword);
     myEventEmitter.emit('event', 'app.post /search', 'INFO', 'search page (search.ejs) was displayed.');
     res.render('search', {status: req.session.status, theResults});
