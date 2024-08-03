@@ -4,28 +4,43 @@ var getFullText = function(text) {
   const DEBUG = process.env.DEBUG === 'true'; // Ensure DEBUG is defined
 
   if (DEBUG) console.log("postgres.dal.getFullText()");
-  return new Promise(function(resolve, reject) {
 
-    const sql = `
-      SELECT title, publisher, price, category_id, stock_quantity, release_year 
-      FROM games
-      WHERE description ILIKE '%' || $1 || '%'
-        OR make ILIKE '%' || $1 || '%'
-        OR model ILIKE '%' || $1 || '%'
+  return new Promise(function(resolve, reject) {
+    // First, get the column names from the 'games' table
+    const columnQuery = `
+      SELECT column_name
+      FROM information_schema.columns
+      WHERE table_name = 'games'
     `;
 
-    if (DEBUG) console.log(sql);
-    dal.query(sql, [text], (err, result) => {
+    dal.query(columnQuery, [], (err, result) => {
       if (err) {
-        // logging should go here
         if (DEBUG) console.log(err);
-        reject(err);
-      } else {
-        if (DEBUG) console.log(`Row count: ${result.rowCount}`);
-        resolve(result.rows);
+        return reject(err);
       }
-    }); 
-  }); 
+
+      const columns = result.rows.map(row => row.column_name);
+      const conditions = columns.map(column => `${column}::text ILIKE '%' || $1 || '%'`).join(' OR ');
+
+      const sql = `
+        SELECT *
+        FROM games
+        WHERE ${conditions}
+      `;
+
+      if (DEBUG) console.log(sql);
+
+      dal.query(sql, [text], (err, result) => {
+        if (err) {
+          if (DEBUG) console.log(err);
+          return reject(err);
+        } else {
+          if (DEBUG) console.log(`Row count: ${result.rowCount}`);
+          resolve(result.rows);
+        }
+      });
+    });
+  });
 };
 
 module.exports = {

@@ -23,6 +23,12 @@
                     <input type="text" id="keyword" name="keyword" value="<%= locals.keyword %>" required>
                 </label>
                 </br>
+                <label for="database">Choose Database:</label>
+                <select id="database" name="database">
+                    <option value="mongo">MongoDB</option>
+                    <option value="postgres">PostgreSQL</option>
+                </select>
+                </br>
                 <button>POST</button>
             </form>
         </div>

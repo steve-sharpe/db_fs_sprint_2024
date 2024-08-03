@@ -3,7 +3,7 @@ const router = express.Router();
 const {setToken, authenticateJWT} = require('../services/auth');
 const myEventEmitter = require('../services/logEvents.js');
 
-const pDal = require('../services/p.fulltext.dal')
+const pDal = require('../services/p.fulltext.dal');
 const mDal = require('../services/m.fulltext.dal');
 const app = require('../index.js');
 
@@ -20,13 +20,29 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    let theResults = await mDal.getFullText(req.body.keyword); 
+    const { keyword, database } = req.body;
+    let theResults = [];
+
+    if (database === 'mongo') {
+        theResults = await mDal.getFullText(keyword);
+    } else if (database === 'postgres') {
+        theResults = await pDal.getFullText(keyword);
+    }
+
     myEventEmitter.emit('event', 'app.post /search', 'INFO', 'search page (search.ejs) was displayed.');
     res.render('search', {status: req.session.status, theResults});
 });
 
 router.post('/search', async (req, res) => {
-    let theResults = await pDal.getFullText(req.body.keyword);
+    const { keyword, database } = req.body;
+    let theResults = [];
+
+    if (database === 'mongo') {
+        theResults = await mDal.getFullText(keyword);
+    } else if (database === 'postgres') {
+        theResults = await pDal.getFullText(keyword);
+    }
+
     myEventEmitter.emit('event', 'app.post /search', 'INFO', 'search page (search.ejs) was displayed.');
     res.render('search', {status: req.session.status, theResults});
 });
