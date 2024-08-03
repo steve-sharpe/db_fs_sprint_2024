@@ -4,7 +4,8 @@ const {setToken, authenticateJWT} = require('../services/auth');
 const myEventEmitter = require('../services/logEvents.js');
 
 const pDal = require('../services/p.fulltext.dal')
-const mDal = require('../services/m.fulltext.dal')
+const mDal = require('../services/m.fulltext.dal');
+const app = require('../index.js');
 
 // Use the setToken middleware to set the JWT token from the session
 router.use(setToken);
@@ -20,6 +21,12 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     let theResults = await mDal.getFullText(req.body.keyword); 
+    myEventEmitter.emit('event', 'app.post /search', 'INFO', 'search page (search.ejs) was displayed.');
+    res.render('search', {status: req.session.status, theResults});
+});
+
+app.post('/search', async (req, res) => {
+    let theResults = await pDal.getFullText(req.body.keyword);
     myEventEmitter.emit('event', 'app.post /search', 'INFO', 'search page (search.ejs) was displayed.');
     res.render('search', {status: req.session.status, theResults});
 });

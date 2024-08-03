@@ -7,19 +7,24 @@
                 </br> 
                 <% if (theResults.length > 0) { %>
                     <% theResults.forEach(item => { %>
-                        <b><%= item.make %> <%= item.model %></b> - 
-                        <%= item.description %> </br>
+                        <b>Title:</b> <%= item.title %> </br>
+                        <b>Publisher:</b> <%= item.publisher %> </br>
+                        <b>Release Year:</b> <%= item.release_year %> </br>
+                        <b>Price:</b> $<%= item.price %> </br>
+                        <b>Category ID:</b> <%= item.category_id %> </br>
+                        <b>Stock Quantity:</b> <%= item.stock_quantity %> </br>
+                        <hr>
                     <% }) %>
                 <% } else { %>
                     <p>No search results.</p>
                 <% } %>
-            </br><label>Auto Search:</label></br>
-            <label>Keyword:
-                <input type="text" id="keyword" name="keyword" value="<%= locals.keyword %>" required>
-            </label>
-            </br>
-            <button>POST</button>
-        </form>
+                </br><label>Auto Search:</label></br>
+                <label>Keyword:
+                    <input type="text" id="keyword" name="keyword" value="<%= locals.keyword %>" required>
+                </label>
+                </br>
+                <button>POST</button>
+            </form>
         </div>
        
         </br>
