@@ -27,40 +27,41 @@ async function testDatabaseConnection() {
 testDatabaseConnection();
 
 
-// const { MongoClient } = require('mongodb');
 
-// async function testDatabaseConnection() {
-//     const connectionString = process.env.MDBLOCAL;
-//     if (!connectionString) {
-//         console.error("MongoDB connection string is not defined. Please set the MDBLOCAL environment variable.");
-//         return;
-//     }
+const { MongoClient } = require('mongodb');
 
-//     const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
+async function testDatabaseConnection2() {
+    const connectionString = process.env.MDBLOCAL;
+    if (!connectionString) {
+        console.error("MongoDB connection string is not defined. Please set the MDBLOCAL environment variable.");
+        return;
+    }
 
-//     try {
-//         await client.connect();
-//         console.log("Successfully connected to the MongoDB database.");
+    const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
-//         const dbName = 'mongodb'; // Replace with your actual database name if needed
-//         const db = client.db(dbName); // Use the specified database name
-//         const collectionName = 'games'; // Ensure this is the correct collection name
-//         const collection = db.collection(collectionName);
+    try {
+        await client.connect();
+        console.log("Successfully connected to the MongoDB database.");
 
-//         console.log(`Accessing database: ${dbName}`);
-//         console.log(`Accessing collection: ${collectionName}`);
+        const dbName = 'mongodb'; // Replace with your actual database name if needed
+        const db = client.db(dbName); // Use the specified database name
+        const collectionName = 'games'; // Ensure this is the correct collection name
+        const collection = db.collection(collectionName);
 
-//         const documents = await collection.find({}).toArray();
-//         console.log("Documents in the collection:", documents);
-//     } catch (err) {
-//         console.error("Failed to connect to the MongoDB database.", err);
-//     } finally {
-//         await client.close();
-//     }
-// }
+        console.log(`Accessing database: ${dbName}`);
+        console.log(`Accessing collection: ${collectionName}`);
 
-// // Call the function to test the database connection and display contents
-// testDatabaseConnection();
+        const documents = await collection.find({}).toArray();
+        console.log("Documents in the collection:", documents);
+    } catch (err) {
+        console.error("Failed to connect to the MongoDB database.", err);
+    } finally {
+        await client.close();
+    }
+}
+
+// Call the function to test the database connection and display contents
+testDatabaseConnection2();
 
 const express = require('express');
 const session = require('express-session');
