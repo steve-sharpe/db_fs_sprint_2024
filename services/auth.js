@@ -15,7 +15,7 @@ const authenticateJWT = (req, res, next) => {
     } else {
         if(DEBUG) console.log('Status: 401');
         // return res.sendStatus(401);
-        req.session.status = 'Please log in to view this page.';
+        req.session.status = 'Login or register to use the Gamo Searchomatronic.';
         res.redirect('/auth');
     }
 };

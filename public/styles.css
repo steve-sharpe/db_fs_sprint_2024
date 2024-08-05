@@ -1,6 +1,6 @@
 /* styles.css */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
@@ -35,54 +35,70 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.login {
-  width: 300px;
+.login, .register-form {
+  width: 360px;
   margin: 50px auto;
-  padding: 30px;
+  padding: 40px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
-.login h1 {
+.login h1, .register-form h1 {
   margin-bottom: 20px;
   font-size: 1.5em;
   color: #333;
 }
 
-.login form {
+.login form, .register-form form {
   display: flex;
   flex-direction: column;
 }
 
-.login label {
+.login label, .register-form label {
   margin-bottom: 5px;
   font-weight: bold;
   color: #333;
 }
 
 .login input[type="text"],
-.login input[type="password"] {
+.login input[type="password"],
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form input[type="email"] {
   margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1em;
+  transition: border-color 0.3s;
 }
 
-.login input[type="submit"] {
-  padding: 10px;
+.login input[type="text"]:focus,
+.login input[type="password"]:focus,
+.register-form input[type="text"]:focus,
+.register-form input[type="password"]:focus,
+.register-form input[type="email"]:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+.login input[type="submit"],
+.register-form input[type="submit"] {
+  padding: 12px;
   border: none;
   border-radius: 4px;
-  background-color: #5cb85c;
+  background-color: #1a73e8;
   color: white;
   font-size: 1em;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.login input[type="submit"]:hover {
-  background-color: #4cae4c;
+.login input[type="submit"]:hover,
+.register-form input[type="submit"]:hover {
+  background-color: #185abc;
 }
 
 footer {
@@ -95,14 +111,13 @@ footer {
   bottom: 0;
 }
 
-/* styles.css */
-auth {
+.auth {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-auth a {
+.auth a {
   color: #333;
   margin: 0 10px;
   text-decoration: none;
@@ -113,31 +128,21 @@ auth a {
   transition: background-color 0.3s, color 0.3s;
 }
 
-status {
+.auth a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.status {
   display: block;
   margin: 20px auto;
   padding: 20px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   width: 80%;
   max-width: 600px;
   text-align: center;
   font-size: 1.2em;
   color: #333;
-}
-
-auth a:hover {
-  background-color: #333;
-  color: white;
-}
-
-.status, .auth {
-  margin: 20px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 600px;
 }
