@@ -1,13 +1,72 @@
 <html lang="en">
-    <%- include('./partials/header.ejs') %>
-    <body>
-        <%- include('./partials/nav.ejs') %>
-        <div class="content">
-            <h2>Welcome</h2>
-        </div>
-        <%- include('./partials/status.ejs') %>
-        </br>
-        <%- include('./partials/auth.ejs') %>
-    </body>
-    <%- include('./partials/footer.ejs') %>
+	<%- include('./partials/header.ejs') %>
+	<body>
+		<%- include('./partials/nav.ejs') %>
+		<div class="content">
+			<h1>Welcome to GameFinder</h1>
+
+			<!-- NES Image Section -->
+			<div class="nes-image">
+				<img
+					class="nes-img"
+					src="https://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg"
+					alt="Nintendo Entertainment System"
+				/>
+				<p>
+					The Nintendo Entertainment System (NES) is an 8-bit third-generation
+					home video game console produced by Nintendo.
+				</p>
+			</div>
+
+			<p>Your ultimate destination to search and discover video games.</p>
+
+			<!-- Call to Action for Login -->
+			<div class="login-prompt">
+				<p>Please <a href="/auth">log in</a> to search for games.</p>
+			</div>
+
+			<!-- Featured Games Section -->
+			<div class="featured-games">
+				<h2>Featured Games</h2>
+				<div class="game-list">
+					<div class="game-item">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/en/0/03/Super_Mario_Bros._box.png"
+							alt="Super Mario Bros."
+						/>
+						<h3>Super Mario Bros.</h3>
+						<p>
+							Join Mario on his quest to rescue Princess Toadstool from the evil
+							Bowser.
+						</p>
+					</div>
+					<div class="game-item">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/en/4/41/Legend_of_zelda_cover_%28with_cartridge%29_gold.png"
+							alt="The Legend of Zelda"
+						/>
+						<h3>The Legend of Zelda</h3>
+						<p>
+							Embark on an epic adventure with Link to save Princess Zelda and
+							the kingdom of Hyrule.
+						</p>
+					</div>
+					<div class="game-item">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/en/b/be/Megaman2_box.jpg"
+							alt="Mega Man 2"
+						/>
+						<h3>Mega Man 2</h3>
+						<p>
+							Help Mega Man defeat Dr. Wily and his army of Robot Masters in
+							this classic action-platformer.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<%- include('./partials/auth.ejs') %>
+	</body>
+	<%- include('./partials/footer.ejs') %>
 </html>

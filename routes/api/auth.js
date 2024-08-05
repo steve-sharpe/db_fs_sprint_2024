@@ -23,6 +23,33 @@ router.get('/:id', async (req, res) => {
         res.json({message: "Service Unavailable", status: 503});
     }
 });
+
+// login route
+router.post('/login', async (req, res) => {
+    if(DEBUG) console.log('ROUTE: /api/auth/login POST ' + req.url);
+    try {
+        let aLogin = await dal.getLoginByUsername(req.body.username);
+        if (aLogin.length === 0) {
+            // log this error to an error log file.
+            res.statusCode = 404;
+            res.json({message: "Not Found", status: 404});
+        } else {
+            const match = await bcrypt.compare(req.body.password, aLogin.password);
+            if (match) {
+                // Successful login, redirect to search
+                res.redirect()
+            } else {
+                res.statusCode = 401;
+                res.json({message: "Unauthorized", status: 401});
+            }
+        }
+    } catch (error) {
+        // log this error to an error log file.
+        res.statusCode = 503;
+        res.json({message: "Service Unavailable", status: 503});
+    }
+});
+
 // reset the password
 router.patch('/:id', async (req, res) => {
     if(DEBUG) console.log('ROUTE: /api/auth PATCH ' + req.params.id);
@@ -50,6 +77,7 @@ router.patch('/:id', async (req, res) => {
         res.json({message: "Service Unavailable", status: 503});
     }
 });
+
 // delete the login 
 router.delete('/:id', async (req, res) => {
     if(DEBUG) console.log('ROUTE: /api/auth DELETE ' + req.params.id);
@@ -63,6 +91,7 @@ router.delete('/:id', async (req, res) => {
         res.json({message: "Service Unavailable", status: 503});
     }
 });
+
 // // list the active api routes
 // if(DEBUG) {
 //     router.stack.forEach(function(r){
@@ -71,4 +100,5 @@ router.delete('/:id', async (req, res) => {
 //         }
 //     });
 // }
+
 module.exports = router;
