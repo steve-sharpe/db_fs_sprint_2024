@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
             req.session.user = user;
             req.session.token = token;
             req.session.status = 'Happy for your return ' + user.username;
-            res.redirect('/');
+            res.redirect('/search');
             return;
         } else {
             myEventEmitter.emit('event', 'auth.post', 'INVALID', `Incorrect password was entered.`);
