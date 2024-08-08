@@ -1,28 +1,45 @@
 <html lang="en">
-    <div class="container">
-        <%- include('./partials/header.ejs') %>
-        <body>
-            <%- include('./partials/nav.ejs') %>
-            <div class="container">
-                <div class="content">
-                    <h2>About Our Program</h2>
-                    <p>Welcome to our program! This application serves as a comprehensive API designed to facilitate user login and allow seamless searching through an extensive library of games. Our API is built to integrate smoothly with e-commerce stores, providing a robust backend solution for game-related transactions and user management.</p>
-                    
-                    <p>Key Features:</p>
-                    <ul>
-                        <li>User Authentication: Secure login and registration functionality.</li>
-                        <li>Game Library: Search through a vast collection of games with detailed information.</li>
-                        <li>Integration: Easy integration with e-commerce platforms for managing game sales.</li>
-                    </ul>
-                    
-                    <p>Our goal is to provide a reliable and efficient backend service that supports the needs of both users and store owners. Whether you are looking to browse our game library or integrate our services into your e-commerce platform, our API is designed to meet your requirements.</p>
-                    
-                    <p>Thank you for choosing our program. We are committed to delivering a high-quality service and continuously improving our features to better serve you.</p>
-                </div>
-            </div>
-            </br>
-            <%- include('./partials/auth.ejs') %>
-        </body>
-        <%- include('./partials/footer.ejs') %>
-    </div>
+	<div class="container">
+		<%- include('./partials/header.ejs') %>
+		<body>
+			<%- include('./partials/nav.ejs') %>
+			<div class="container">
+				<div class="content">
+					<h1>About Our Program</h1>
+					<p>
+						Welcome to our program! This application serves as a comprehensive
+						API designed to facilitate user login and allow seamless searching
+						through an extensive library of games. Our API is built to integrate
+						smoothly with e-commerce stores, providing a robust backend solution
+						for game-related transactions and user management.
+					</p>
+
+					<p><strong>Key Features:</strong></p>
+					<ul class="no-bullets">
+						<li>
+							<strong>User Authentication:</strong> Secure login and
+							registration functionality.
+						</li>
+						<li>
+							<strong>Game Library:</strong> Search through a vast collection of
+							games with detailed information.
+						</li>
+						<li>
+							<strong>Integration:</strong> Easy integration with e-commerce
+							platforms for managing game sales.
+						</li>
+					</ul>
+
+					<p>
+						Thank you for choosing our program. <br />
+						We are committed to delivering a high-quality service and
+						continuously improving our features to better serve you.
+					</p>
+				</div>
+			</div>
+
+			<%- include('./partials/auth.ejs') %>
+		</body>
+		<%- include('./partials/footer.ejs') %>
+	</div>
 </html>

@@ -3,40 +3,50 @@
         <%- include('./partials/header.ejs') %>
         <body>
             <%- include('./partials/nav.ejs') %>
-            <div class="search content">
-                <form action="/search" method="POST" class="search-form">
-                    <div class="form-group">
-                        <label for="keyword">Keyword:</label>
-                        <input type="text" id="keyword" name="keyword" value="<%= locals.keyword %>" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="database">Choose Database:</label>
-                        <select id="database" name="database">
-                            <option value="mongo">MongoDB</option>
-                            <option value="postgres">PostgreSQL</option>
-                        </select>
-                    </div>
-                    <button type="submit">Search</button>
-                </form>
-                <% if (theResults.length > 0) { %>
-                    <div class="results-grid">
-                        <% theResults.forEach(item => { %>
-                            <div class="result-item">
-                                <b>Title:</b> <%= item.title %> </br>
-                                <b>Publisher:</b> <%= item.publisher %> </br>
-                                <b>Release Year:</b> <%= item.release_year %> </br>
-                                <b>Price:</b> $<%= item.price %> </br>
-                                <b>Category ID:</b> <%= item.category_id %> </br>
-                                <b>Stock Quantity:</b> <%= item.stock_quantity %> </br>
-                            </div>
-                        <% }) %>
-                    </div>
-                <% } else { %>
-                    <p>No search results.</p>
-                <% } %>
+            <div class="container">
+                <div class="search content">
+                    <form action="/search" method="POST" class="search-form">
+                        <div class="form-group">
+                            <label for="keyword">Keyword:</label>
+                            <input type="text" id="keyword" name="keyword" value="<%= locals.keyword %>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="database">Choose Database:</label>
+                            <select id="database" name="database">
+                                <option value="mongo">NES (MongoDB)</option>
+                                <option value="postgres">SNES(PostgreSQL)</option>
+                            </select>
+                        </div>
+                        <button type="submit">Search</button>
+                    </form>
+                    <% if (theResults.length > 0) { %>
+                        <div class="results-grid">
+                            <% theResults.forEach((item, index) => { %>
+                                <div class="result-item" onclick="openGoogleSearch('<%= item.title %>')">
+                                    <b>Title:</b> <%= item.title %> </br>
+                                    <b>Publisher:</b> <%= item.publisher %> </br>
+                                    <b>Release Year:</b> <%= item.release_year %> </br>
+                                    <b>Price:</b> $<%= item.price %> </br>
+                                    <b>Category ID:</b> <%= item.category_id %> </br>
+                                    <b>Stock Quantity:</b> <%= item.stock_quantity %> </br>
+                                </div>
+                            <% }) %>
+                        </div>
+                    <% } else { %>
+                        <p>No search results.</p>
+                    <% } %>
+                    
+                </div>
             </div>
             <%- include('./partials/auth.ejs') %>
         </body>
         <%- include('./partials/footer.ejs') %>
     </div>
+    <script>
+        function openGoogleSearch(title) {
+            const query = encodeURIComponent(title);
+            const url = `https://www.google.com/search?q=${query}`;
+            window.open(url, '_blank');
+        }
+    </script>
 </html>
