@@ -117,7 +117,7 @@ const apiIndexRoutes = require('./routes/api/index');
 
 app.use('/auth', authRoutes);
 app.use('/search', searchRoutes);
-app.use('/api/auth', apiAuthRoutes);
+app.use('/api/auth', apiAuthRoutes);-
 app.use('/api/fulltext', apiFulltextRoutes);
 app.use('/api', apiIndexRoutes);
 
