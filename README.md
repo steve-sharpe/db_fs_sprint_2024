@@ -60,7 +60,7 @@ The application also keeps a log of all search activities.
 
 ## Logging
 
-Searches performed on the Search Page are recorded in a log file named `search-log.txt` located in the root directory of the project.
+Searches performed on the Search Page are recorded in a log in a directory named `logs/` located in the root directory of the project.
 
 ## Project Structure
 
